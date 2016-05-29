@@ -7,7 +7,7 @@ defmodule ReaderEx.FeedController do
   plug :scrub_params, "feed" when action in [:create, :update]
 
   def index(conn, _params) do
-    feeds = Repo.all(Feed)
+    feeds = Repo.all(Feed) |> Repo.preload(:entries)
     render(conn, "index.json", feeds: feeds)
   end
 

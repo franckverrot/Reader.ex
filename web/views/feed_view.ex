@@ -6,7 +6,14 @@ defmodule ReaderEx.FeedView do
       feeds: Enum.map(feeds, fn(feed) ->
         %{
           name: feed.name,
-          url: feed.url
+          url: feed.url,
+          entries: Enum.map(feed.entries,
+            fn(entry) ->
+              %{
+                title: entry.title,
+                link: entry.link
+              }
+            end)
         }
       end)
     }
