@@ -24,7 +24,7 @@ defmodule ReaderEx.FeedController do
 
     changeset = %Feed{}
                   |> Repo.preload(:entries)
-                  |> Feed.changeset(%{name: original_feed.title, url: url})
+                  |> Feed.changeset(%{name: original_feed.title, url: original_feed.link})
                   |> Ecto.Changeset.change
                   |> Ecto.Changeset.put_assoc(:entries, entries)
 
