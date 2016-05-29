@@ -2,7 +2,14 @@ defmodule ReaderEx.FeedView do
   use ReaderEx.Web, :view
 
   def render("index.json", %{feeds: feeds}) do
-    %{feeds: feeds}
+    %{
+      feeds: Enum.map(feeds, fn(feed) ->
+        %{
+          name: feed.name,
+          url: feed.url
+        }
+      end)
+    }
   end
 
   def render("create_success.json", %{feed: feed}) do
