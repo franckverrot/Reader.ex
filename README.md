@@ -9,6 +9,10 @@
   * Install Node.js dependencies with `npm install`
   * Start Phoenix endpoint with `mix phoenix.server`
 
+## API Endpoints
+
+TBD.
+
 ## Requirements
 
   * Elixir
