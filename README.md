@@ -11,7 +11,7 @@
 
 ## API Endpoints
 
-TBD.
+* `POST /feeds`
 
 ## Requirements
 
