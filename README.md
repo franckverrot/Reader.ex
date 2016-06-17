@@ -11,7 +11,7 @@
 
 ## API Endpoints
 
-* `POST /feeds`
+* `POST /feeds`: Get list of feeds
 
 ## Requirements
 
